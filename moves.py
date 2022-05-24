@@ -1,3 +1,5 @@
+
+
 VALID_DIRECTIONS = {'left', 'up', 'down', 'right'}
 
 
