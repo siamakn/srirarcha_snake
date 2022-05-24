@@ -1,4 +1,4 @@
-name: Scikit Spicy Snake project
+name: Snake
 
 on:
   push:
