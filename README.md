@@ -2,7 +2,7 @@
 a snake game written in python
 
 
-![Test with Pytest](https://github.com/siamakn/srirarcha_snake/workflows/Python%20application/badge.svg)
+![Test with Pytest](https://github.com/siamakn/srirarcha_snake/workflows/Snake/badge.svg)
 
 ### I Installation
 

@@ -12,7 +12,7 @@ The Discipline of TDD (Test-Driven-Development)
 7. Back to step 1
 also see: Uncle Bob "Clean Code Lectures"
 """
-from spicy_snake import move, VALID_DIRECTIONS
+from spicy_snake.moves import move, VALID_DIRECTIONS
 import pytest
 import random
 
