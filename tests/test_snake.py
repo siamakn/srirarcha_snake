@@ -3,14 +3,7 @@ Automated Test with pytest
 (we write another program to test our application)
 The Discipline of TDD (Test-Driven-Development)
 -----------------------------------------------
-1. Write a test
-2. Run the test and make sure it fails
-3. Write just enough code to make the test pass
-4. Run the test again and make sure it passes
-5. Clean up
-6. Run the tests again (regression testing)
-7. Back to step 1
-also see: Uncle Bob "Clean Code Lectures"
+ Uncle Bob "Clean Code Lectures"
 """
 from spicy_snake.moves import move, VALID_DIRECTIONS
 import pytest
@@ -25,13 +18,12 @@ import random
     ((5, 5), 'up', (5, 6)),
     ((5, 5), 'down', (5, 4)),
     ((3, 3), 'left', (2, 3))
+    # ((0, 5), 'left', (10, 5)) # only if we allow wraparound
 ])
 def test_move(position, direction, expected):
-    '''feature: the snake is moving in all 4 directions'''
+    """the snake is moving in all 4 directions"""
     assert move(position, direction) == expected
 
-
-# TODO: also test random positions
 
 def test_move_random():
     """test random positions"""
@@ -44,12 +36,6 @@ def test_move_random():
         move(position, direction)
 
 
-def test_move_left():
-    position = (5, 5)  # x, y
-    new_position = move(position, 'left')
-    assert new_position == (4, 5)
-
-
 def test_move_invalid_direction():
     with pytest.raises(Exception):
         move((1, 1), 'dummy')
@@ -60,6 +46,3 @@ def test_move_fraction():
     position = (3.14159, 5)  # x, y
     with pytest.raises(Exception):  # test passes if an Exception is generated
         move(position, 'down')
-
-
-# TODO: check for the boundaries of the playing field
